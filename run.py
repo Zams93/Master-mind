@@ -1,3 +1,16 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+"""3 digits long and limits number of guesses"""
+
+NUM_DIGITS = 3
+MAX_GUESS = 10
+
+def getAnswerNum():
+    """Returns the random unique digit numbers that are the answer"""
+    number = list(range(10))
+    random.shuffle(number)
+    answerNum = ""
+    for i in range(NUM_DIGITS):
+        answerNum += str(number[i])
+    return answerNum    
+
+print(answerNum)
