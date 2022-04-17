@@ -42,4 +42,11 @@ If the number is not guessed correctly after the 10 tries a message advising end
 
  ## Deployment 
 
+I followed the steps below to deploy my website on GitHub:
+
+1. Deployed project to Heroku
+2. Connected Github account
+3. Go in to Github repository and click on “Settings”
+4. Find the “Source” section and select “Master Branch”
+5. Once “Master Branch” has been selected, the website is now published with link provided.
 
