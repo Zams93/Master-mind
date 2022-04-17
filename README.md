@@ -1,31 +1,45 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mastermind Python Game
 
-Welcome Zarmine Samuel,
+## What is the game?
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This is a python coded game that runs in the terminal. The aim of the game is for the player to guess the randomly generated 3 digit number within 10 guesses, there are three types of hints given after every guess. 
+These are cold, warm and hot:
+* Cold - This means none of the digets are correct.
+* Warm - This means a digit is correct but in the wrong position.
+* Hot - This means a digit is correct and in the right position.
 
-## Reminders
+After the 10 guesses have been fufilled, if the number is guessed correctly a message advising this will appear and then the option to play again.
+If the number is not guessed correctly after the 10 tries a message advising end of chances and option to play another game.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Game flow chart
+![Hints code snippet](images/Python%20flow%20chart.jpg)
 
-## Creating the Heroku app
+ ## Main functions in the game
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+ ### Getting a unique random number
 
-1. `heroku/python`
-2. `heroku/nodejs`
+ ![Function code snippet](images/python-random-num-function.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+ This was achieved by using the random.shuffle function, this will randomly change the order of the provided list's items. The data type for answerNum is set to string as if it was set to numbers the digits provided would be added together to give a total instead of being placed together to form the 3 digit number. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+ ### Assigning the hints
 
-Connect your GitHub repository and deploy as normal.
+![Hints code snippet](images/python-hints.png)
 
-## Constraints
+ The names cold, warm, hot for the hints are used as they are clear on meaning. If the guess does not match the random number the hints then come in to action, this is done by looping through the indexs for answerNum and guess.
+ If the hints list is empty after the loop this is where it is assigned the cold hint as none of the digits match. 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+ ### How the game starts
 
------
-Happy coding!
+![Hints code snippet](images/python-game-display.png)
+![Hints code snippet](images/python-interpolation.png)
+
+ The print function is used to display the game information for the user at the start of the game, then the option to make the first guess is presented. String interpolation is used to display what the current guess number is. 
+
+ ## Testing
+
+ The main form of testing I have used for this project has been print statements throughout my code so I could see where it was going wrong and where the code needed to be fixed, this was done regularly to stop issues building.
+
+ ## Deployment 
+
+

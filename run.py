@@ -6,7 +6,7 @@ import random
 NUM_DIGITS = 3
 MAX_GUESS = 10
 
-#functions
+# Functions
 
 def getAnswerNum():
     """Returns the random unique digit numbers that are the answer"""
@@ -45,7 +45,7 @@ def dataTypeNums(num):
 
     return True    
 
-# application starts
+# Application starts
 
 print("The number I am thinking of has 3 digits. Can you guess what the number is?")
 print("Here are the hints that I will give...")
